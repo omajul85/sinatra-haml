@@ -21,6 +21,14 @@ h2 {
   float: left;
 }
 
+.definition {
+  background-color: yellow;
+}
+
+.italic {
+  font-style: italic;
+}
+
 #side_bar {
   margin: 12px 0;
   width: 30%;

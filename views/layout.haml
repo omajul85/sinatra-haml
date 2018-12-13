@@ -11,6 +11,14 @@
       #header
         %h1 My Sinatra website
         %p A simple site made with Sinatra and Haml
+      #nav
+        %ol
+          %a{href: '/'}
+            %li Home
+          %a{href: '/about'}
+            %li About
+          %a{href: '/basics'}
+            %li Basics
 
       #content
         = yield

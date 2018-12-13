@@ -1,0 +1,38 @@
+%h1 The Rails 5 way
+
+%h2 The Basics
+%br
+
+%article{ data: { author_id: 1 } } Data attributes
+%hr
+
+%article{ data: { author: {id: 1, name: "Kevin Wu" } } } Nested data-attributes
+%hr
+
+%label Required input
+%input{ type: 'text', required: true }
+%hr
+
+-# Classes and IDs
+
+.definition Haml has some serious tricks up its sleeves for dealing with complex id and class attributes. For instance, an array of class names will automatically be joined with a space.
+
+%article{ class: ['visible', 'Sports'] } This is an amazing article
+
+%article{ class: ['italic', 1 < 5 && 'breakingnews'] } Note that the array is flattened and any elements that evaluate to false or nil will be dropped automatically.
+
+%hr
+.definition Evaluating Ruby code
+%p= %w{one two three four five}.join(' - ')
+- if [true, false].sample
+    %p This was printed because the condition was TRUE
+- else
+    %p This was printed because the condition was FALSE
+
+- author = "Pepito Benavides"
+%p By: #{author}.
+
+%p= "By: #{author}"
+
+.definition Unescaping html
+&= "Remember the awful <blink> tag?"  

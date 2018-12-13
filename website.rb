@@ -9,3 +9,7 @@ end
 get '/about' do
   haml :about
 end
+
+get '/basics' do
+  haml :basics
+end
